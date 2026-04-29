@@ -1,0 +1,80 @@
+body {
+    background-color: #050505;
+    color: #00d9ff;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#panic-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 99999;
+    background: white;
+}
+
+#scanline {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 3px;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.2;
+}
+
+header {
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 2px solid #111;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.game-grid {
+    display: flex;
+    justify-content: center; /* Centers the single card */
+    padding: 40px;
+}
+
+.card {
+    background: #0f0f0f;
+    border: 1px solid #222;
+    padding: 20px;
+    width: 280px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card:hover {
+    border-color: #00d9ff;
+    background: #151515;
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.thumbnail {
+    width: 100%;
+    height: 160px;
+    background: #1a1a1a;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #444; /* Dimmed "Coming Soon" text */
+}
+
+.loading {
+    color: #ffaa00;
+    text-shadow: 0 0 5px rgba(255, 170, 0, 0.5);
+}
