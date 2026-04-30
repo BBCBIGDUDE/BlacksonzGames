@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | -b</title>
+    <title>Baldi Mod | Play</title>
+    <style>
+      body { margin: 0; background-color: black; overflow: hidden; }
+      #gameContainer { width: 100vw; height: 100vh; }
+    </style>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      // The path must exactly match the folder and filename on GitHub
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/-B Project.json");
+      // This maps the game to the renamed files in your Build folder
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/project.json");
     </script>
   </head>
-  <body style="background-color: black; margin: 0;">
-    <div id="gameContainer" style="width: 100vw; height: 100vh; margin: auto"></div>
+  <body>
+    <div id="gameContainer"></div>
   </body>
 </html>
