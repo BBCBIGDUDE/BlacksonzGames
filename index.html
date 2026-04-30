@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Baldi Mod | Play</title>
+<html>
+<head>
+    <title>BlacksonzGames | Home</title>
     <style>
-      body { 
-        margin: 0; 
-        background-color: #000; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        height: 100vh; 
-        overflow: hidden; 
-      }
-      #gameContainer { 
-        width: 960px; 
-        height: 600px;
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
-      }
+        body { background: #222; color: white; font-family: sans-serif; text-align: center; }
+        .game-card { 
+            display: inline-block; 
+            margin: 20px; 
+            padding: 10px; 
+            border: 2px solid green; 
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .game-card:hover { transform: scale(1.1); background: #333; }
+        a { color: white; text-decoration: none; font-size: 20px; }
     </style>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/project.json");
-    </script>
-  </head>
-  <body>
-    <div id="gameContainer"></div>
-  </body>
+</head>
+<body>
+    <h1>Welcome to BlacksonzGames</h1>
+    <p>Choose a game to play:</p>
+
+    <a href="baldi/index.html">
+        <div class="game-card">
+            <img src="baldi_icon.png" width="150"><br>
+            Baldi's Basics Mod
+        </div>
+    </a>
+
+    </body>
 </html>
