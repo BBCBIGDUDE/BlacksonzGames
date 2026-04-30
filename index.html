@@ -6,10 +6,11 @@
     <title>Unity WebGL Player | -b</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
+      // The path must exactly match the folder and filename on GitHub
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/-B Project.json");
     </script>
   </head>
-  <body>
-    <div id="gameContainer" style="width: 960px; height: 600px; margin: auto"></div>
+  <body style="background-color: black; margin: 0;">
+    <div id="gameContainer" style="width: 100vw; height: 100vh; margin: auto"></div>
   </body>
 </html>
