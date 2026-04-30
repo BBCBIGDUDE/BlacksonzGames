@@ -5,12 +5,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Baldi Mod | Play</title>
     <style>
-      body { margin: 0; background-color: black; overflow: hidden; }
-      #gameContainer { width: 100vw; height: 100vh; }
+      body { 
+        margin: 0; 
+        background-color: #000; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        height: 100vh; 
+        overflow: hidden; 
+      }
+      #gameContainer { 
+        width: 960px; 
+        height: 600px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+      }
     </style>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      // This maps the game to the renamed files in your Build folder
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/project.json");
     </script>
   </head>
