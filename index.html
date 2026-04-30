@@ -3,147 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chopped Cheese Rowan Games| Hub</title>
+    <title>Blacksonz Games | Hub</title>
     <style>
         :root {
-            --primary-glow: #00ff41; /* Neon Green */
-            --secondary-glow: #ff003c; /* Cyber Red */
-            --bg-color: #050505;
+            --primary: #00ff41; /* Cyber Green */
+            --bg: #050505;
             --card-bg: #111;
         }
 
         body {
             margin: 0;
-            background-color: var(--bg-color);
+            background-color: var(--bg);
             color: white;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Orbitron', sans-serif; /* A gamer font */
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Animated Background Gradients */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% 50%, #1a2a1a 0%, #050505 100%);
-            z-index: -1;
         }
 
         header {
-            margin: 60px 0;
+            margin: 50px 0;
             text-align: center;
         }
 
         h1 {
             font-size: 3.5rem;
+            letter-spacing: 10px;
+            color: white;
+            text-shadow: 0 0 20px var(--primary);
             margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 8px;
-            background: linear-gradient(to right, #fff, var(--primary-glow));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.5));
+        }
+
+        .subtitle {
+            color: #666;
+            letter-spacing: 4px;
+            font-size: 0.8rem;
+            margin-top: 10px;
         }
 
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            justify-content: center;
             gap: 40px;
-            width: 90%;
-            max-width: 1200px;
-            padding-bottom: 100px;
+            padding: 50px;
+            flex-wrap: wrap;
         }
 
         .game-card {
+            width: 350px;
             background: var(--card-bg);
-            border: 1px solid #333;
+            border: 1px solid #222;
             border-radius: 20px;
             overflow: hidden;
+            transition: all 0.4s ease;
             text-decoration: none;
             color: white;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
 
         .game-card:hover {
-            transform: scale(1.05) translateY(-10px);
-            border-color: var(--primary-glow);
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 0 40px rgba(0, 255, 65, 0.2);
         }
 
-        .thumb-box {
+        .cover-img {
             width: 100%;
             height: 200px;
-            background: #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #444;
-            border-bottom: 1px solid #333;
+            object-fit: cover; /* This makes sure the image fills the box perfectly */
+            border-bottom: 1px solid #222;
+            filter: grayscale(30%);
+            transition: 0.4s;
         }
 
-        .game-card:hover .thumb-box {
-            color: var(--primary-glow);
+        .game-card:hover .cover-img {
+            filter: grayscale(0%);
         }
 
-        .info {
+        .details {
             padding: 25px;
             text-align: center;
         }
 
-        .info h3 { margin: 0 0 10px 0; font-size: 1.6rem; }
-        .info p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+        .details h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
 
-        .btn {
+        .details p {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .play-now {
             display: inline-block;
-            padding: 12px 35px;
-            background: transparent;
-            border: 2px solid var(--primary-glow);
-            color: var(--primary-glow);
+            padding: 10px 30px;
+            border: 2px solid var(--primary);
             border-radius: 50px;
+            color: var(--primary);
             font-weight: bold;
             text-transform: uppercase;
             transition: 0.3s;
         }
 
-        .game-card:hover .btn {
-            background: var(--primary-glow);
+        .game-card:hover .play-now {
+            background: var(--primary);
             color: black;
-            box-shadow: 0 0 15px var(--primary-glow);
+            box-shadow: 0 0 20px var(--primary);
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <h1>Rowan Chopped Cheese</h1>
-        <p style="color: #666; letter-spacing: 2px;">Rowan Chopped Cheese Dick Cheese</p>
+        <h1>BLACKSONZ</h1>
+        <div class="subtitle">UNBLOCKED GAME ARCHIVE</div>
     </header>
 
     <div class="container">
         <a href="baldi/index.html" class="game-card">
-            <div class="thumb-box">
-                Minus B
-            </div>
-            <div class="info">
-                <h3>-b (Baldi Mod)</h3>
-                <p>The classic horror mod, now fully unblocked.</p>
-                <span class="btn">Play Game</span>
+            <img src="image_29dede.png" alt="Baldi Mod" class="cover-img">
+            <div class="details">
+                <h3>Baldi's Basics Mod</h3>
+                <p>The "-b" mod. Survive the schoolhouse with new visuals.</p>
+                <div class="play-now">Initialize Game</div>
             </div>
         </a>
 
-        <div class="game-card" style="opacity: 0.5; cursor: not-allowed;">
-            <div class="thumb-box">COMING SOON</div>
-            <div class="info">
-                <h3>New Project</h3>
-                <p>Development in progress...</p>
-                <span class="btn" style="border-color: #555; color: #555;">Locked</span>
+        <div class="game-card" style="opacity: 0.4; cursor: default;">
+            <div class="cover-img" style="background: #222; display: flex; align-items: center; justify-content: center; font-size: 3rem;">?</div>
+            <div class="details">
+                <h3>Next Project</h3>
+                <p>New mod or simulator coming soon.</p>
+                <div class="play-now" style="border-color: #444; color: #444;">Locked</div>
             </div>
         </div>
     </div>
